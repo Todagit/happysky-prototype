@@ -1,0 +1,25 @@
+.main
+  .main__header
+    %h2.active-group
+      -# = @group.name
+      %ul.member-list
+        .member
+          Member: 
+          -# - @group.users.each do |user|
+          -#   = user.name
+    .edit-btn
+      -# = link_to edit_group_path(@group) do
+        Edit
+  .contents
+    .messages
+      -# = render partial: 'message', collection: @messages
+    .score
+      <ここにスコア一覧表示>
+  .main__form
+    -# = form_for [@group, @message] do |f|
+      .input-box
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon("far", "image")
+          = f.file_field :image, class: 'message-image'
+        = f.submit 'Send', class: 'submit-btn'
