@@ -1,0 +1,35 @@
+.main
+  .main__header
+    %h2.active-group
+      <ここにグループ名(大会名)を表示>
+      -# = @group.name
+      %ul.member-list
+        .member
+          Member: 参加者一覧
+          -# - @group.users.each do |user|
+          -#   = user.name
+    .edit-btn
+      Edit
+      -# = link_to edit_group_path(@group) do
+        Edit
+  .contents
+    .messages
+      <ここがチャット画面>
+      -# = render partial: 'message', collection: @messages
+    .score
+      <ここにスコア一覧表示>
+  .main__form
+    .input-box
+      %input.input-box__text{name: "message", placeholder: "type a message", type: "text"}
+      %label{class: "input-box__image", for: "message-image"}
+        = icon('far', 'image')
+        %input{type: "file", class: "message-image"}
+      %input.submit-btn{name: "submit-btn", type: "submit", value: "Send"} 
+
+    -# = form_for [@group, @message] do |f|
+    -#   .input-box
+    -#     = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+    -#     = f.label :image, class: 'input-box__image' do
+    -#       = icon("far", "image")
+    -#       = f.file_field :image, class: 'message-image'
+    -#     = f.submit 'Send', class: 'submit-btn'
