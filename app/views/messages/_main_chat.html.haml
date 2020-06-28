@@ -1,16 +1,14 @@
 .main
   .main__header
     %h2.active-group
-      <ここにグループ名(大会名)を表示>
-      -# = @group.name
+      = @group.name
       %ul.member-list
         .member
-          Member: 参加者一覧
-          -# - @group.users.each do |user|
-          -#   = user.name
+          Member: 
+          - @group.users.each do |user|
+            = user.name
     .edit-btn
-      Edit
-      -# = link_to edit_group_path(@group) do
+      = link_to edit_group_path(@group) do
         Edit
   .contents
     .messages
