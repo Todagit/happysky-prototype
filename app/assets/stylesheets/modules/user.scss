@@ -1,4 +1,12 @@
 .account-page {
+  .account-page.top{
+    h1 {
+      font-size: 50px;
+      color: #64e8ff;
+      font-weight: 500;
+      padding-top: 50px;
+    }
+  }
   .account-page__inner {
     width: 980px;
     margin: 60px auto;
@@ -19,6 +27,7 @@
   }
 
   .account-page__header {
+    
     h2 {
       margin-bottom: 10px;
       letter-spacing: 3px;
