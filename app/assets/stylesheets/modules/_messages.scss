@@ -32,9 +32,9 @@
   margin: 0 20px;
   display: flex;
   justify-content: space-between;
-  // a {
-  //   color: $mainWhite;
-  // }
+  a {
+    color: $mainWhite;
+  }
   &__name {
     line-height: 20px;
     color: $mainWhite;
@@ -43,9 +43,12 @@
   }
   &__icons {
     display: flex;
-  &__edit {
-    margin-right: 5px;
-  }
+    &__edit {
+      margin-right: 5px;
+    }
+    &__signout {
+      margin-left: 5px;
+    }
   }
 }
 
