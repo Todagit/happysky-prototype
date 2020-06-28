@@ -89,7 +89,7 @@
       display: flex;
       margin-top: 15px;
     }
-    .edit-btn {
+    a {
       display: block;
       margin-top: 28px;
       margin-right: 40px;
@@ -100,17 +100,6 @@
       padding: 7px 20px;
       text-decoration: none;
     }
-    // a {
-    //   display: block;
-    //   margin-top: 28px;
-    //   margin-right: 40px;
-    //   height: 40px;
-    //   width: 72px;
-    //   border: solid 1px;
-    //   color: $skyblue;
-    //   padding: 7px 20px;
-    //   text-decoration: none;
-    // }
   }
   .contents {
     display: flex;
